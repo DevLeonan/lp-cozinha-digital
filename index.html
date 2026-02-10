@@ -283,8 +283,8 @@
     </a>
 
     <script>
-        // CONFIGURAÇÃO DO SEU WHATSAPP
-        const SEU_ZAP = "5551984928382"; // Coloque seu número aqui (apenas números)
+        // CONFIGURAÇÃO DO SEU WHATSAPP (Com 55 na frente)
+        const SEU_ZAP = "5551996799655"; 
 
         function redirecionarZap(nome) {
             const msg = `🔥 *OLÁ! QUERO A PROMOÇÃO DE R$ 199,90* 🔥%0A%0A` +
@@ -292,7 +292,8 @@
                         `💻 Tenho interesse no sistema Cozinha Digital com GPS e Pix Automático.%0A` +
                         `Pode me explicar como funciona?`;
             
-            window.location.href = `https://wa.me/${51996799655}?text=${msg}`;
+            // Puxando a variável correta agora
+            window.location.href = `https://wa.me/${SEU_ZAP}?text=${msg}`;
         }
 
         // Formulário Principal
@@ -305,7 +306,8 @@
         // Botão Flutuante
         function chamarZap() {
             const msg = `Olá! Vi o site e tenho dúvidas sobre o Cozinha Digital.`;
-            window.location.href = `https://wa.me/${51996799655}?text=${msg}`;
+            // Puxando a variável correta aqui também
+            window.location.href = `https://wa.me/${SEU_ZAP}?text=${msg}`;
         }
     </script>
 
