@@ -62,7 +62,7 @@
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
-        /* Hero Section (Topo) */
+        /* Hero Section */
         .hero {
             padding: 60px 0 50px;
             background: linear-gradient(180deg, rgba(10,10,10,0.95), #0a0a0a),
@@ -73,13 +73,13 @@
         }
 
         .logo-area img {
-            max-height: 80px; /* Altura da logo */
+            max-height: 80px;
             margin-bottom: 20px;
         }
 
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* Proporção 16:9 */
+            padding-bottom: 56.25%;
             height: 0;
             border-radius: 12px;
             overflow: hidden;
@@ -92,6 +92,47 @@
             top: 0; left: 0; width: 100%; height: 100%;
         }
 
+        /* Mockup de Celular (Borda do print) */
+        .phone-mockup {
+            border: 8px solid #333;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+            background: #000;
+        }
+        
+        .phone-mockup:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .phone-mockup img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Steps (Passo a Passo) */
+        .step-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 15px;
+            height: 100%;
+        }
+        .step-badge {
+            background: var(--primary);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
         /* Cards de Benefícios */
         .card-box {
             background: var(--card);
@@ -100,25 +141,6 @@
             height: 100%;
             border: 1px solid #222;
             transition: transform 0.3s;
-        }
-
-        .card-box:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-
-        /* Carrossel de Imagens */
-        .carousel-item img {
-            height: 500px;
-            object-fit: cover; /* Ajusta a imagem sem esticar */
-            object-position: top center;
-            border-radius: 12px 12px 0 0;
-        }
-        
-        @media (max-width: 768px) {
-            .carousel-item img {
-                height: 300px; /* Altura menor no celular */
-            }
         }
 
         /* Oferta */
@@ -210,70 +232,83 @@
 <section class="py-5" style="background: #0f0f0f; border-bottom: 1px solid #222;">
     <div class="container">
         
-        <div class="text-center mb-4">
-            <span class="text-success small fw-bold text-uppercase tracking-wider">Interface Moderna</span>
-            <h2 class="mt-2">Simples, Rápido e <span class="text-gradient">Intuitivo</span></h2>
-            <p class="text-white-50">Seu cliente não precisa baixar nada. É clicar e pedir.</p>
+        <div class="text-center mb-5">
+            <span class="text-success small fw-bold text-uppercase tracking-wider">Design Profissional</span>
+            <h2 class="mt-2">Seu cardápio <span class="text-gradient">nunca foi tão bonito</span></h2>
+            <p class="text-white-50">Fotos grandes, carregamento rápido e fácil de usar. O cliente sente fome só de olhar.</p>
         </div>
 
-        <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-10">
-                
-                <div id="sistemaCarousel" class="carousel slide shadow-lg" data-bs-ride="carousel">
-                    
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#sistemaCarousel" data-bs-slide-to="0" class="active"></button>
-                        <button type="button" data-bs-target="#sistemaCarousel" data-bs-slide-to="1"></button>
-                        <button type="button" data-bs-target="#sistemaCarousel" data-bs-slide-to="2"></button>
-                    </div>
-
-                    <div class="carousel-inner rounded-4 border border-secondary border-opacity-25">
-                        
-                        <div class="carousel-item active">
-                            <img src="img/cardapio.jpg" class="d-block w-100" alt="Cardápio Digital" 
-                                 onerror="this.src='https://placehold.co/800x500/151515/FF5100?text=Falta+img/cardapio.jpg'">
-                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded-3 py-2">
-                                <h5>Cardápio Digital Lindo</h5>
-                                <p class="small mb-0">Fotos grandes para dar fome no cliente.</p>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <img src="img/checkout.jpg" class="d-block w-100" alt="Checkout Simples"
-                                 onerror="this.src='https://placehold.co/800x500/151515/FFB700?text=Falta+img/checkout.jpg'">
-                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded-3 py-2">
-                                <h5>Checkout em 30 Segundos</h5>
-                                <p class="small mb-0">Sem cadastro chato. Nome e endereço.</p>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <img src="img/painel.jpg" class="d-block w-100" alt="Painel de Pedidos"
-                                 onerror="this.src='https://placehold.co/800x500/151515/25D366?text=Falta+img/painel.jpg'">
-                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded-3 py-2">
-                                <h5>Painel de Pedidos em Tempo Real</h5>
-                                <p class="small mb-0">O pedido chega com alerta sonoro.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <button class="carousel-control-prev" type="button" data-bs-target="#sistemaCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#sistemaCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
-                        <span class="visually-hidden">Próximo</span>
-                    </button>
-
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-md-4 col-10">
+                <div class="phone-mockup">
+                    <img src="img/cardapio1.jpg" alt="Exemplo Cardápio 1" onerror="this.src='https://placehold.co/400x700/111/FF5100?text=Cardapio+1'">
                 </div>
-                
-                <p class="text-center mt-3 text-white-50 small">
-                    <i class="bi bi-camera"></i> Imagens reais do sistema
-                </p>
-
+                <p class="text-center mt-3 fw-bold text-white-50">Hamburgueria</p>
             </div>
+
+            <div class="col-md-4 col-10">
+                <div class="phone-mockup">
+                    <img src="img/cardapio2.jpg" alt="Exemplo Cardápio 2" onerror="this.src='https://placehold.co/400x700/111/FFB700?text=Cardapio+2'">
+                </div>
+                <p class="text-center mt-3 fw-bold text-white-50">Açaí & Sobremesas</p>
+            </div>
+
+            <div class="col-md-4 col-10">
+                <div class="phone-mockup">
+                    <img src="img/cardapio3.jpg" alt="Exemplo Cardápio 3" onerror="this.src='https://placehold.co/400x700/111/25D366?text=Cardapio+3'">
+                </div>
+                <p class="text-center mt-3 fw-bold text-white-50">Sushi / Pizzaria</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="py-5" style="background: #151515;">
+    <div class="container">
+        
+        <div class="text-center mb-5">
+            <h2 class="mb-3">Como funciona o <span class="text-gradient">Sistema Completo</span></h2>
+            <p class="text-white-50">Automatize do pedido até a entrega.</p>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-md-4">
+                <div class="step-card">
+                    <div class="step-badge">1. Cliente Pede</div>
+                    <h5 class="mb-3 text-white">Pagamento Pix Automático</h5>
+                    <div class="phone-mockup" style="border-width: 4px;">
+                        <img src="img/checkout.jpg" alt="Checkout" onerror="this.src='https://placehold.co/400x300/222/fff?text=Checkout+Img'">
+                    </div>
+                    <p class="small text-white-50 mt-3">O cliente escolhe, coloca o endereço e paga no Pix. O sistema confere se o dinheiro caiu sozinho.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="step-card">
+                    <div class="step-badge bg-warning text-dark">2. Loja Recebe</div>
+                    <h5 class="mb-3 text-white">Painel de Pedidos</h5>
+                    <div class="phone-mockup" style="border-width: 4px;">
+                        <img src="img/painel.jpg" alt="Painel Gestor" onerror="this.src='https://placehold.co/400x300/222/fff?text=Painel+Img'">
+                    </div>
+                    <p class="small text-white-50 mt-3">Toca um som de alerta. Você vê o pedido, imprime e manda pra produção com 1 clique.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="step-card">
+                    <div class="step-badge bg-danger">3. Cozinha Prepara</div>
+                    <h5 class="mb-3 text-white">Impressão Automática</h5>
+                    <div class="phone-mockup" style="border-width: 4px;">
+                        <img src="img/cozinha.jpg" alt="Via de Cozinha" onerror="this.src='https://placehold.co/400x300/222/fff?text=Cozinha+Img'">
+                    </div>
+                    <p class="small text-white-50 mt-3">A comanda sai pronta com nome, endereço e observações. Zero erros na montagem.</p>
+                </div>
+            </div>
+
         </div>
 
     </div>
@@ -394,7 +429,6 @@
 </div>
 
 <script>
-    // SEU NÚMERO DE WHATSAPP
     const SEU_ZAP = "5551996799655";
 
     function chamarZap() {
