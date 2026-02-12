@@ -143,6 +143,20 @@
             transition: transform 0.3s;
         }
 
+        /* Carrossel de Imagens */
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+            object-position: top center;
+            border-radius: 12px 12px 0 0;
+        }
+        
+        @media (max-width: 768px) {
+            .carousel-item img {
+                height: 300px;
+            }
+        }
+
         /* Oferta */
         .offer-box {
             background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
@@ -233,32 +247,32 @@
     <div class="container">
         
         <div class="text-center mb-5">
-            <span class="text-success small fw-bold text-uppercase tracking-wider">Design Profissional</span>
-            <h2 class="mt-2">Seu cardápio <span class="text-gradient">nunca foi tão bonito</span></h2>
-            <p class="text-white-50">Fotos grandes, carregamento rápido e fácil de usar. O cliente sente fome só de olhar.</p>
+            <span class="text-success small fw-bold text-uppercase tracking-wider">Visual Incrível</span>
+            <h2 class="mt-2">Veja como sua loja <span class="text-gradient">vai ficar</span></h2>
+            <p class="text-white-50">Exemplos reais de clientes faturando hoje:</p>
         </div>
 
         <div class="row g-4 justify-content-center">
             
             <div class="col-md-4 col-10">
                 <div class="phone-mockup">
-                    <img src="img/cardapio1.jpg" alt="Exemplo Cardápio 1" onerror="this.src='https://placehold.co/400x700/111/FF5100?text=Cardapio+1'">
+                    <img src="img/cardapio1.jpg" alt="Açaí da Bia" onerror="this.src='https://placehold.co/400x700/111/FF5100?text=Falta+img/cardapio1.jpg'">
                 </div>
-                <p class="text-center mt-3 fw-bold text-white-50">Hamburgueria</p>
+                <p class="text-center mt-3 fw-bold text-white fs-5">💜 Açaí da Bia</p>
             </div>
 
             <div class="col-md-4 col-10">
                 <div class="phone-mockup">
-                    <img src="img/cardapio2.jpg" alt="Exemplo Cardápio 2" onerror="this.src='https://placehold.co/400x700/111/FFB700?text=Cardapio+2'">
+                    <img src="img/cardapio2.jpg" alt="Brasa19 Hamburgueria" onerror="this.src='https://placehold.co/400x700/111/FFB700?text=Falta+img/cardapio2.jpg'">
                 </div>
-                <p class="text-center mt-3 fw-bold text-white-50">Açaí & Sobremesas</p>
+                <p class="text-center mt-3 fw-bold text-white fs-5">🔥 Brasa19 Hamburgueria</p>
             </div>
 
             <div class="col-md-4 col-10">
                 <div class="phone-mockup">
-                    <img src="img/cardapio3.jpg" alt="Exemplo Cardápio 3" onerror="this.src='https://placehold.co/400x700/111/25D366?text=Cardapio+3'">
+                    <img src="img/cardapio3.jpg" alt="Lancheria do João" onerror="this.src='https://placehold.co/400x700/111/25D366?text=Falta+img/cardapio3.jpg'">
                 </div>
-                <p class="text-center mt-3 fw-bold text-white-50">Sushi / Pizzaria</p>
+                <p class="text-center mt-3 fw-bold text-white fs-5">🍔 Lancheria do João</p>
             </div>
 
         </div>
@@ -270,8 +284,8 @@
     <div class="container">
         
         <div class="text-center mb-5">
-            <h2 class="mb-3">Como funciona o <span class="text-gradient">Sistema Completo</span></h2>
-            <p class="text-white-50">Automatize do pedido até a entrega.</p>
+            <h2 class="mb-3">Sistema Completo <span class="text-gradient">Por Dentro</span></h2>
+            <p class="text-white-50">Do cliente pedindo até você configurando.</p>
         </div>
 
         <div class="row g-4">
@@ -281,31 +295,31 @@
                     <div class="step-badge">1. Cliente Pede</div>
                     <h5 class="mb-3 text-white">Pagamento Pix Automático</h5>
                     <div class="phone-mockup" style="border-width: 4px;">
-                        <img src="img/checkout.jpg" alt="Checkout" onerror="this.src='https://placehold.co/400x300/222/fff?text=Checkout+Img'">
+                        <img src="img/checkout.jpg" alt="Tela de Pagamento" onerror="this.src='https://placehold.co/400x300/222/fff?text=Falta+img/checkout.jpg'">
                     </div>
-                    <p class="small text-white-50 mt-3">O cliente escolhe, coloca o endereço e paga no Pix. O sistema confere se o dinheiro caiu sozinho.</p>
+                    <p class="small text-white-50 mt-3">O cliente escolhe, coloca o endereço e paga. Sem enrolação no WhatsApp.</p>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="step-card">
-                    <div class="step-badge bg-warning text-dark">2. Loja Recebe</div>
-                    <h5 class="mb-3 text-white">Painel de Pedidos</h5>
+                    <div class="step-badge bg-warning text-dark">2. Você Gerencia</div>
+                    <h5 class="mb-3 text-white">Configuração da Loja</h5>
                     <div class="phone-mockup" style="border-width: 4px;">
-                        <img src="img/painel.jpg" alt="Painel Gestor" onerror="this.src='https://placehold.co/400x300/222/fff?text=Painel+Img'">
+                        <img src="img/painel.jpg" alt="Configurações da Loja" onerror="this.src='https://placehold.co/400x300/222/fff?text=Falta+img/painel.jpg'">
                     </div>
-                    <p class="small text-white-50 mt-3">Toca um som de alerta. Você vê o pedido, imprime e manda pra produção com 1 clique.</p>
+                    <p class="small text-white-50 mt-3">Painel fácil para o dono da loja. Mude preços, taxas e horários em segundos pelo celular.</p>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="step-card">
-                    <div class="step-badge bg-danger">3. Cozinha Prepara</div>
-                    <h5 class="mb-3 text-white">Impressão Automática</h5>
+                    <div class="step-badge bg-danger">3. Pedido Chega</div>
+                    <h5 class="mb-3 text-white">Tela de Pedidos Organizada</h5>
                     <div class="phone-mockup" style="border-width: 4px;">
-                        <img src="img/cozinha.jpg" alt="Via de Cozinha" onerror="this.src='https://placehold.co/400x300/222/fff?text=Cozinha+Img'">
+                        <img src="img/cozinha.jpg" alt="Pedidos Chegando" onerror="this.src='https://placehold.co/400x300/222/fff?text=Falta+img/cozinha.jpg'">
                     </div>
-                    <p class="small text-white-50 mt-3">A comanda sai pronta com nome, endereço e observações. Zero erros na montagem.</p>
+                    <p class="small text-white-50 mt-3">Os pedidos chegam aqui tudo bonitinho e organizado. É só preparar e entregar.</p>
                 </div>
             </div>
 
